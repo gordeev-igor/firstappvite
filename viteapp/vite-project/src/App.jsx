@@ -34,7 +34,9 @@ function App() {
                     <input class="input__pass" type="password"></input>
                   </form>
                 </div>
-                <button type="submit">LOGIN</button>
+                <div className="button">
+                  <button className="button__login" type="submit">LOGIN</button>
+                </div>
               </div>
             </div>
           </div>

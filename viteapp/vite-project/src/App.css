@@ -103,3 +103,54 @@ a {
   border-radius: 30px;
   padding: 63px 56px 43px;
 }
+
+.username__title,
+.password__title {
+  font-family: 'Hammersmith One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #68A691;
+}
+
+.input__name,
+.input__pass {
+  width: 489px;
+  height: 53px;
+  background-color: #F4F4F9;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  font-size: 30px;
+
+}
+
+.password {
+  margin-top: 30px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  width: 200px;
+  height: 50px;
+  background: #68A691;
+  border-radius: 5px;
+}
+
+.button__login {
+  text-align: center;
+  font-family: 'Hammersmith One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #464655;
+  background-color: #68A691;
+  border: none;
+}
