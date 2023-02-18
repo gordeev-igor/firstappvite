@@ -160,3 +160,43 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .form__content-inner {
+    width: 400px;
+  }
+
+  .input__name,
+  .input__pass {
+    width: 300px;
+  }
+}
+
+@media (max-width: 428px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .form__content-inner {
+    width: 300px;
+  }
+
+  .input__name,
+  .input__pass {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
