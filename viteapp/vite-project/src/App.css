@@ -161,6 +161,10 @@ a {
   cursor: pointer;
 }
 
+.button__login:hover {
+  background-color: red;
+}
+
 @media (max-width: 650px) {
   .title {
     font-size: 50px;

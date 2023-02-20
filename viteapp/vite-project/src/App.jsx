@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import './App.css'
 
 
@@ -8,40 +11,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        <div className="registration">
-          <div className="registration__inner">
-            <h1 className="title">
-              Welcome.
-            </h1>
-            <h3 className="subtitle">
-              Hello, nice to se you again!
-            </h3>
-            <div className="form__content">
-              <div className="form__content-inner">
-                <div className="username">
-                  <div className="username__title">
-                    email/username
-                  </div>
-                  <form className="form__login">
-                    <input class="input__name" type="text"></input>
-                  </form>
-                </div>
-                <div className="password">
-                  <div className="password__title">
-                    password
-                  </div>
-                  <form className="form__pass">
-                    <input class="input__pass" type="password"></input>
-                  </form>
-                </div>
-                <div className="button">
-                  <button className="button__login" type="submit">LOGIN</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="auth">
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+        />
+        <Button variant="contained">Login</Button>
       </div>
     </div>
   )
