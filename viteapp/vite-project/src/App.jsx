@@ -11,14 +11,40 @@ function App() {
 
   return (
     <div className="App">
-      <div class="auth">
-        <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-        />
-        <Button variant="contained">Login</Button>
+      <div className="container">
+        <div className="registration">
+          <div className="registration__inner">
+            <h1 className="title">
+              Welcome.
+            </h1>
+            <h3 className="subtitle">
+              Hello, nice to se you again!
+            </h3>
+            <form className="form__content">
+              <div className="form__content-inner">
+                <div className="username">
+                  <div className="username__title">
+                    email/username
+                  </div>
+                  <form className="form__login">
+                    <input class="input__name" type="text"></input>
+                  </form>
+                </div>
+                <div className="password">
+                  <div className="password__title">
+                    password
+                  </div>
+                  <form className="form__pass">
+                    <input class="input__pass" type="password"></input>
+                  </form>
+                </div>
+                <div className="button">
+                  <button className="button__login" type="submit">LOGIN</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   )
