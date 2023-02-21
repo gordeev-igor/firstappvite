@@ -7,7 +7,7 @@ const Container = styled.div`
   align-self: center;
   max-width: 1220px;
   margin: 0 auto;
-  width: 90%;
+  width: calc(100%-32px);
 `;
 
 const Registration = styled.div`
