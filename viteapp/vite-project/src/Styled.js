@@ -7,7 +7,7 @@ const Container = styled.div`
   align-self: center;
   max-width: 1220px;
   margin: 0 auto;
-  width: calc(100%-32px);
+  width: calc(100% - 32px);
 `;
 
 const Registration = styled.div`
@@ -59,6 +59,9 @@ const FormContentInner = styled.div`
   padding: 63px 56px 43px;
 `;
 
+const Username = styled.div`
+`;
+
 const UsernameTitle = styled.div`
   font-family: 'Hammersmith One';
   font-style: normal;
@@ -68,6 +71,10 @@ const UsernameTitle = styled.div`
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #68A691;
+`;
+
+const Password = styled.div`
+
 `;
 
 const PasswordTitle = styled.div`
@@ -145,6 +152,8 @@ const ButtonLogin = styled.button`
 
 
 
-export { Title, Container, Registration, Subtitle, FormContent, FormContentInner, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin };
+
+
+export { Title, Container, Registration, Subtitle, FormContent, FormContentInner, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin, Username, Password };
 
 
