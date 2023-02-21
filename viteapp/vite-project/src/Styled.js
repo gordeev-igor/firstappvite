@@ -61,20 +61,7 @@ const FormContent = styled.form`
 const UserInfo = styled.div`
 `;
 
-const UsernameTitle = styled.div`
-  font-family: 'Hammersmith One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 25px;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  color: #68A691;
-`;
-
-
-
-const PasswordTitle = styled.div`
+const UserInfoTitle = styled.div`
   font-family: 'Hammersmith One';
   font-style: normal;
   font-weight: 400;
@@ -152,6 +139,6 @@ const ButtonLogin = styled.button`
 
 
 
-export { Title, Container, Registration, Subtitle, FormContent, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin, UserInfo };
+export { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputName, InputPass, Button, ButtonLogin, UserInfo };
 
 
