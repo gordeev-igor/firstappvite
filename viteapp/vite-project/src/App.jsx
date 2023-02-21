@@ -1,52 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+
 import './App.css'
+
+import { Title, Container, Registration, Subtitle, FormContent, FormContentInner, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin } from './Styled.js'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div className="container">
-        <div className="registration">
-          <div className="registration__inner">
-            <h1 className="title">
+      <Container>
+        <Registration>
+          <div className="ristration__inner">
+            <Title>
               Welcome.
-            </h1>
-            <h3 className="subtitle">
+            </Title>
+            <Subtitle>
               Hello, nice to se you again!
-            </h3>
-            <form className="form__content">
-              <div className="form__content-inner">
+            </Subtitle>
+            <FormContent className="form__content">
+              <FormContentInner >
                 <div className="username">
-                  <div className="username__title">
+                  <UsernameTitle className="username__title">
                     email/username
-                  </div>
+                  </UsernameTitle>
                   <form className="form__login">
-                    <input class="input__name" type="text"></input>
+                    <InputName type="text"></InputName>
                   </form>
                 </div>
                 <div className="password">
-                  <div className="password__title">
+                  <PasswordTitle >
                     password
-                  </div>
+                  </PasswordTitle>
                   <form className="form__pass">
-                    <input class="input__pass" type="password"></input>
+                    <InputPass type="password"></InputPass>
                   </form>
                 </div>
-                <div className="button">
-                  <button className="button__login" type="submit">LOGIN</button>
-                </div>
-              </div>
-            </form>
+                <Button>
+                  <ButtonLogin type="submit">LOGIN</ButtonLogin>
+                </Button>
+              </FormContentInner>
+            </FormContent>
           </div>
-        </div>
-      </div>
-    </div>
+        </Registration >
+      </Container >
+    </div >
   )
 }
 
