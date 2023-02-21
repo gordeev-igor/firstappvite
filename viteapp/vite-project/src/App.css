@@ -56,3 +56,7 @@ select {
 a {
   text-decoration: none;
 }
+
+.div {
+  display: flex;
+}

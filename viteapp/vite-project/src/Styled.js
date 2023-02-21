@@ -4,15 +4,18 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-self: center;
   max-width: 1220px;
   margin: 0 auto;
   width: calc(100% - 32px);
+  height: 100vh;
 `;
 
 const Registration = styled.div`
   width: 100%;
-  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
   max-width: 600px;
 `;
 
@@ -39,13 +42,11 @@ const Subtitle = styled.h3`
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #68A691;
-  margin-top: 27px;
 `;
 
 const FormContent = styled.form`
   display: flex;
-  justify-content: center;
-  margin-top: 67px;
+  justify-content: center;  
 `;
 
 const FormContentInner = styled.div`

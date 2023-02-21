@@ -27,7 +27,7 @@ function App() {
               <PasswordTitle >
                 password
               </PasswordTitle>
-              <InputPass></InputPass>
+              <InputPass type="password"></InputPass>
             </Password>
             <Button>
               <ButtonLogin type="submit">LOGIN</ButtonLogin>
