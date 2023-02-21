@@ -46,11 +46,7 @@ const Subtitle = styled.h3`
 
 const FormContent = styled.form`
   display: flex;
-  justify-content: center;  
-`;
-
-const FormContentInner = styled.div`
-  display: flex;
+  justify-content: center; 
   flex-direction: column;
   gap: 27px;
   border: 3px solid #464655;
@@ -59,6 +55,8 @@ const FormContentInner = styled.div`
   border-radius: 30px;
   padding: 63px 56px 43px;
 `;
+
+
 
 const Username = styled.div`
 `;
@@ -155,6 +153,6 @@ const ButtonLogin = styled.button`
 
 
 
-export { Title, Container, Registration, Subtitle, FormContent, FormContentInner, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin, Username, Password };
+export { Title, Container, Registration, Subtitle, FormContent, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin, Username, Password };
 
 
