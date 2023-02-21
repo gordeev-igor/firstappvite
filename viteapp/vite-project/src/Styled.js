@@ -58,7 +58,7 @@ const FormContent = styled.form`
 
 
 
-const Username = styled.div`
+const UserInfo = styled.div`
 `;
 
 const UsernameTitle = styled.div`
@@ -72,9 +72,7 @@ const UsernameTitle = styled.div`
   color: #68A691;
 `;
 
-const Password = styled.div`
 
-`;
 
 const PasswordTitle = styled.div`
   font-family: 'Hammersmith One';
@@ -153,6 +151,7 @@ const ButtonLogin = styled.button`
 
 
 
-export { Title, Container, Registration, Subtitle, FormContent, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin, Username, Password };
+
+export { Title, Container, Registration, Subtitle, FormContent, UsernameTitle, PasswordTitle, InputName, InputPass, Button, ButtonLogin, UserInfo };
 
 
