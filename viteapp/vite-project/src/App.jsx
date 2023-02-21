@@ -1,7 +1,7 @@
 
 import './App.css'
 
-import { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputName, InputPass, Button, ButtonLogin, UserInfo } from './Styled.js'
+import { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputInfo, Button, ButtonLogin, UserInfo } from './Styled.js'
 
 
 function App() {
@@ -20,13 +20,13 @@ function App() {
             <UserInfoTitle>
               email/username
             </UserInfoTitle>
-            <InputName type="text"></InputName>
+            <InputInfo type="text"></InputInfo>
           </UserInfo>
           <UserInfo>
             <UserInfoTitle >
               password
             </UserInfoTitle>
-            <InputPass type="password"></InputPass>
+            <InputInfo type="password"></InputInfo>
           </UserInfo>
           <Button>
             <ButtonLogin type="submit">LOGIN</ButtonLogin>

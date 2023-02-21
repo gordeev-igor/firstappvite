@@ -72,7 +72,7 @@ const UserInfoTitle = styled.div`
   color: #68A691;
 `;
 
-const InputName = styled.input`
+const InputInfo = styled.input`
   width: 100%;
   height: 53px;
   background-color: #F4F4F9;
@@ -85,18 +85,6 @@ const InputName = styled.input`
   }
 `;
 
-const InputPass = styled.input`
-  width: 100%;
-  height: 53px;
-  background-color: #F4F4F9;
-  border-radius: 3px;
-  font-size: 30px;
-  padding-left: 9px;
-
-  &:hover{
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-`;
 
 const Button = styled.div`
   display: flex;
@@ -139,6 +127,6 @@ const ButtonLogin = styled.button`
 
 
 
-export { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputName, InputPass, Button, ButtonLogin, UserInfo };
+export { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputInfo, Button, ButtonLogin, UserInfo };
 
 
