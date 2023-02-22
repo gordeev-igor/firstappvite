@@ -6,8 +6,8 @@ const Container = styled.div`
   justify-content: center;
   max-width: 1220px;
   margin: 0 auto;
-  width: calc(100% - 32px);
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
 `;
 
 const Registration = styled.div`
@@ -17,6 +17,7 @@ const Registration = styled.div`
   justify-content: center;
   gap: 30px;
   max-width: 600px;
+  width: calc(100% - 32px);
 `;
 
 const Title = styled.h1`
@@ -51,7 +52,7 @@ const FormContent = styled.form`
   gap: 27px;
   border: 3px solid #464655;
   width: 100%;
-  height: 400px;
+  height: fit-content;
   border-radius: 30px;
   padding: 63px 56px 43px;
 `;
