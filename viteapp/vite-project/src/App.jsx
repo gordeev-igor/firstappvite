@@ -1,40 +1,25 @@
 
-import './App.css'
-
-import { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputInfo, Button, ButtonLogin, UserInfo } from './Styled.js'
+import './App.css';
+import Login from './Login';
+import styled from 'styled-components';
 
 
 function App() {
 
   return (
     <Container>
-      <Registration>
-        <Title>
-          Welcome.
-        </Title>
-        <Subtitle>
-          Hello, nice to se you again!
-        </Subtitle>
-        <FormContent>
-          <UserInfo>
-            <UserInfoTitle>
-              email/username
-            </UserInfoTitle>
-            <InputInfo type="text"></InputInfo>
-          </UserInfo>
-          <UserInfo>
-            <UserInfoTitle >
-              password
-            </UserInfoTitle>
-            <InputInfo type="password"></InputInfo>
-          </UserInfo>
-          <Button>
-            <ButtonLogin type="submit">LOGIN</ButtonLogin>
-          </Button>
-        </FormContent>
-      </Registration >
+      <Login/>
     </Container >
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+`;
 
 export default App

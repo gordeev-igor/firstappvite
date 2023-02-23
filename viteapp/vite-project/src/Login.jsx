@@ -1,14 +1,39 @@
 
+import './App.css'
 import styled from 'styled-components';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 1220px;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 100vh;
-`;
+
+
+function Login() {
+
+  return (
+    <Registration>
+      <Title>
+        Welcome.
+      </Title>
+      <Subtitle>
+        Hello, nice to se you again!
+      </Subtitle>
+      <FormContent>
+        <UserInfo>
+          <UserInfoTitle>
+            email/username
+          </UserInfoTitle>
+          <InputInfo type="text"></InputInfo>
+        </UserInfo>
+        <UserInfo>
+          <UserInfoTitle >
+            password
+          </UserInfoTitle>
+          <InputInfo type="password"></InputInfo>
+        </UserInfo>
+        <Button>
+          <ButtonLogin type="submit">LOGIN</ButtonLogin>
+        </Button>
+      </FormContent>
+    </Registration >
+  )
+}
 
 const Registration = styled.div`
   width: 100%;
@@ -115,19 +140,4 @@ const ButtonLogin = styled.button`
   }
 `;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-export { Title, Container, Registration, Subtitle, FormContent, UserInfoTitle, InputInfo, Button, ButtonLogin, UserInfo };
-
-
+export default Login
