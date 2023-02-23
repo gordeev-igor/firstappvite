@@ -16,7 +16,6 @@ function Header() {
         </Logo>
         <Menu>
           <MenuList>
-
             <MenuLi>
               <MenuLink href="#">
                 Home
@@ -27,7 +26,6 @@ function Header() {
                 About
               </MenuLink>
             </MenuLi>
-
           </MenuList>
         </Menu>
       </HeaderInner>
@@ -61,10 +59,12 @@ const LogoImg = styled.img`
 `;
 
 const Menu = styled.div`
+  width: 30%;
 `;
 
 const MenuList = styled.ul`
   display: flex;
+  justify-content: space-around;
 `;
 
 const MenuLink = styled.a`
@@ -74,6 +74,8 @@ const MenuLink = styled.a`
   font-size: 25px;
   line-height: 19px;
   color: #000000;
+  padding: 0 10px 0;
+  
 `;
 
 const MenuLi = styled.li`
