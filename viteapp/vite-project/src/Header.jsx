@@ -1,11 +1,12 @@
-
+import React, { useState } from "react";
 import './App.css'
 import styled from 'styled-components';
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 
 
 function Header() {
-
+  const [nav, setNav] = useState(false);
   return (
     <HeaderTop>
       <HeaderInner>
@@ -14,8 +15,8 @@ function Header() {
             <LogoImg src="logo.svg" alt="logo" />
           </LogoLink>
         </Logo>
-        <Menu>
-          <MenuList>
+        <Menu>       
+          <MenuList >
             <MenuLi>
               <MenuLink href="#">
                 Home
@@ -26,8 +27,11 @@ function Header() {
                 About
               </MenuLink>
             </MenuLi>
-          </MenuList>
+          </MenuList>  
         </Menu>
+        <MobileBtn onClick={() => setNav(!nav)}>
+          {nav ? <AiOutlineClose /> : <AiOutlineMenu/>  }
+        </MobileBtn>
       </HeaderInner>
     </HeaderTop>
   )
@@ -64,6 +68,23 @@ const Menu = styled.div`
 const MenuList = styled.ul`
   display: flex;
   gap: 50px;
+      @media ( max-width: 600px) {
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F4F4F9;
+    z-index: 10;
+    
+}
 `;
 
 const MenuLink = styled.a`
@@ -73,11 +94,31 @@ const MenuLink = styled.a`
   font-size: 25px;
   line-height: 19px;
   color: #000000;
+
+  @media ( max-width: 600px) {
+    font-size: 40px;   
+  }
   
 `;
 
 const MenuLi = styled.li`
 `;
+
+const MobileBtn = styled.div`
+  font-size: 35px;
+  display: none;
+
+  @media ( max-width: 600px) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+`;
+
 
 
 
