@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css'
 import styled from 'styled-components';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -11,24 +11,22 @@ function Header() {
     <HeaderTop>
       <HeaderInner>
         <Logo>
-          <LogoLink href="#">
+          <Link to="/">
             <LogoImg src="logo.svg" alt="logo" />
-          </LogoLink>
+          </Link>
         </Logo>
-        <Menu>       
-          <MenuList >
+          <MenuList className={ nav ? "active" : " "}>
             <MenuLi>
-              <MenuLink href="#">
+              <Link className="link__page" to="/home">
                 Home
-              </MenuLink>
+              </Link>
             </MenuLi>
             <MenuLi>
-              <MenuLink href="#">
+            <Link className="link__page" to="/about">
                 About
-              </MenuLink>
+              </Link>
             </MenuLi>
           </MenuList>  
-        </Menu>
         <MobileBtn onClick={() => setNav(!nav)}>
           {nav ? <AiOutlineClose /> : <AiOutlineMenu/>  }
         </MobileBtn>
@@ -56,21 +54,20 @@ const HeaderInner = styled.div`
 const Logo = styled.div`
 `;
 
-const LogoLink = styled.a`
-`;
+// const LogoLink = styled.a`
+// `;
+
 
 const LogoImg = styled.img`
 `;
 
-const Menu = styled.div`
-`;
 
 const MenuList = styled.ul`
   display: flex;
   gap: 50px;
       @media ( max-width: 600px) {
 
-    display: flex;
+    display: none;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
@@ -81,11 +78,12 @@ const MenuList = styled.ul`
     bottom: 0;
     width: 100%;
     height: 100vh;
-    background-color: #F4F4F9;
-    z-index: 10;
+    background-color: #fff;
+    z-index: 10; 
     
 }
 `;
+
 
 const MenuLink = styled.a`
   font-family: 'Inter';
