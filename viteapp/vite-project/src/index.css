@@ -1,5 +1,3 @@
-
-
 @media (max-width: 600px) {
   .active {
     display: flex !important;
@@ -20,10 +18,25 @@
   color: #000000;
 
 
-} 
+}
 
 @media (max-width: 600px) {
-  .link__page{
+  .link__page {
     font-size: 40px;
   }
+}
+
+.link__page-f {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 19px;
+  color: #000000;
+}
+
+@media (max-width: 360px) {
+  .link__page-f {
+    font-size: 20px;
   }
+}
