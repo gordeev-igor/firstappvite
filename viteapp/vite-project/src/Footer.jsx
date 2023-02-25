@@ -49,7 +49,7 @@ const FooterInner = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 360px) {
+  @media (max-width: 600px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@ const MenuListF = styled.ul`
   display: flex;
   gap: 50px;
 
-  @media (max-width: 360px) {
+  @media (max-width: 600px) {
     display: flex;
     justify-content: center;
     align-items: center;
