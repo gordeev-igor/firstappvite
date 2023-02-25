@@ -17,7 +17,7 @@ function Header() {
         </Logo>
           <MenuList className={ nav ? "active" : " "}>
             <MenuLi>
-              <Link className="link__page" to="/home">
+              <Link className="link__page" to="/">
                 Home
               </Link>
             </MenuLi>

@@ -43,6 +43,7 @@ const Registration = styled.div`
   gap: 30px;
   max-width: 600px;
   width: calc(100% - 32px);
+  padding: 15px 0;
 `;
 
 const Title = styled.h1`

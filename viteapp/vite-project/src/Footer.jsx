@@ -16,7 +16,7 @@ function Footer() {
         </Logo>
         <MenuListF>
           <MenuLi>
-            <Link className="link__page-f" to="/home">
+            <Link className="link__page-f" to="/">
               Home
             </Link>
           </MenuLi>
