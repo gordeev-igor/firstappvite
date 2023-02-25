@@ -52,7 +52,7 @@ const FooterInner = styled.div`
   @media (max-width: 600px) {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     gap: 10px;
 
