@@ -1,7 +1,7 @@
 import './App.css';
-import Login from './Login';
-import Header from './Header';
-import Footer from './Footer';
+import Login from './Components/Login';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import styled from 'styled-components';
 import { Route, Routes, Link } from 'react-router-dom';
 import { Homepage } from './pages/Homepage';
