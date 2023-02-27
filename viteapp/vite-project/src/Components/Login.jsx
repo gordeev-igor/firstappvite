@@ -1,10 +1,22 @@
 
 import '../App.css'
 import styled from 'styled-components';
-
+import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+
+const navigate = useNavigate();
+
+const inputInfo = () => {
+  if (login == 'User' && password == 'pass' )
+  navigate('/about')
+  else alert('Неверный Логин или Пароль:(' )
+}
+
+  const [login , setLogin] = useState('');
+  const [password , setPassword] = useState('');
 
   return (
     <Registration>
@@ -19,21 +31,25 @@ function Login() {
           <UserInfoTitle>
             email/username
           </UserInfoTitle>
-          <InputInfo type="text"></InputInfo>
+          <InputInfo type="text" value={login} onChange={e => setLogin(e.target.value)}></InputInfo>
         </UserInfo>
         <UserInfo>
           <UserInfoTitle >
             password
           </UserInfoTitle>
-          <InputInfo type="password"></InputInfo>
+          <InputInfo type="password" value={password} onChange={e => setPassword(e.target.value)}></InputInfo>
         </UserInfo>
         <Button>
-          <ButtonLogin type="submit">LOGIN</ButtonLogin>
+          <ButtonLogin onClick = { inputInfo} type="submit">LOGIN</ButtonLogin>
         </Button>
       </FormContent>
     </Registration >
   )
 }
+
+
+
+
 
 const Registration = styled.div`
   width: 100%;

@@ -14,17 +14,13 @@ function App() {
 
     <Wrapper>
       <Header />
-
       <Container>
-
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/home' element={<Homepage />} />
           <Route path='/about' element={<Aboutpage />} />
         </Routes>
-        
       </Container >
-
       <Footer />
     </Wrapper>
 
