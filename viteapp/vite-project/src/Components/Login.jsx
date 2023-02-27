@@ -12,7 +12,7 @@ const navigate = useNavigate();
 const inputInfo = () => {
   if (login == 'User' && password == 'pass' )
   navigate('/about')
-  else alert('Неверный Логин или Пароль:(' )
+  else alert('Неверный логин или пароль:(' )
 }
 
   const [login , setLogin] = useState('');
