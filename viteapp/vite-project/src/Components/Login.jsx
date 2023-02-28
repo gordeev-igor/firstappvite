@@ -6,17 +6,25 @@ import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
+  const [incorrect, setIncorrect] = useState(false);
+  const navigate = useNavigate();
 
-const navigate = useNavigate();
 
-const inputInfo = () => {
-  if (login == 'User' && password == 'pass' )
-  navigate('/about')
-  else alert('Неверный логин или пароль:(' )
-}
 
-  const [login , setLogin] = useState('');
-  const [password , setPassword] = useState('');
+  const inputInfo = (e) => {
+    e.preventDefault()
+    if (login == 'User' && password == 'pass') {
+      navigate('/about')
+    }
+    else {
+      setIncorrect(true)
+    }
+
+  };
+
+
 
   return (
     <Registration>
@@ -40,15 +48,24 @@ const inputInfo = () => {
           <InputInfo type="password" value={password} onChange={e => setPassword(e.target.value)}></InputInfo>
         </UserInfo>
         <Button>
-          <ButtonLogin onClick = { inputInfo} type="submit">LOGIN</ButtonLogin>
+          <ButtonLogin onClick={inputInfo} type="submit">LOGIN</ButtonLogin>
         </Button>
+        {incorrect && <Incorrect >
+          Ошибка доступа!!!
+        </Incorrect>}
       </FormContent>
     </Registration >
   )
 }
 
 
-
+const Incorrect = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: red;
+`;
 
 
 const Registration = styled.div`
