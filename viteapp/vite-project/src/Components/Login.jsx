@@ -1,7 +1,7 @@
 
 import '../App.css'
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,19 +11,23 @@ function Login() {
   const [incorrect, setIncorrect] = useState(false);
   const navigate = useNavigate();
 
-
-
   const inputInfo = (e) => {
     e.preventDefault()
-    if (login == 'User' && password == 'pass') {
+    if (login == 'user' && password == 'pass') {
       navigate('/about')
     }
     else {
-      setIncorrect(true)
+      setIncorrect(true);
+      setLogin(e.target.value);
+      setPassword(e.target.value);
     }
 
   };
 
+  // useEffect(() =>{
+  //   console.log('компонент был обновлен');
+
+  // });
 
 
   return (
