@@ -51,7 +51,7 @@ function Login() {
           <ButtonLogin onClick={inputInfo} type="submit">LOGIN</ButtonLogin>
         </Button>
         {incorrect && <Incorrect >
-          Ошибка доступа!!!
+          Invalid username or password
         </Incorrect>}
       </FormContent>
     </Registration >
@@ -59,13 +59,7 @@ function Login() {
 }
 
 
-const Incorrect = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  color: red;
-`;
+
 
 
 const Registration = styled.div`
@@ -173,5 +167,15 @@ const ButtonLogin = styled.button`
     opacity: 0.95;
   }
 `;
+
+const Incorrect = styled.div`
+  font-family: "Hammersmith One";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: red;
+`;
+
 
 export default Login
