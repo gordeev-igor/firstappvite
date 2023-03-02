@@ -22,28 +22,43 @@ const Aboutpage = () => {
   }, [])
 
   return (
-    <div className="Aboutpage">
+    <About>
       {
         loading ?
-          <LoadStyle> 
+          <LoadStyle>
             <ScaleLoader
-            color={'#2fa161'}
-            loading={loading}
-            size={250}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
+              color={'#2fa161'}
+              loading={loading}
+              size={250}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
           </LoadStyle>
           :
-          articles.map(article => {
+          <AboutText>
+            {articles.map(article => {
             return (
-              <p><a href={article.webUrl}>{article.webTitle}</a></p>
+            <p><a href={article.webUrl}>{article.webTitle}</a></p>
             )
-          })
+          })}
+          </AboutText>
       }
-    </div>
+    </About>
   )
 }
+
+const About = styled.div`
+  max-width: 100%;
+  width: calc(100% - 32px);
+  font-size: 30px;
+`;
+
+const AboutText = styled.div`
+  font-family: "Hammersmith One";
+  font-style: normal;
+  font-weight: 400;
+  
+`;
 
 const LoadStyle = styled.div`
   display: flex;
