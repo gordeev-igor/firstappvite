@@ -1,7 +1,7 @@
 
 import '../App.css'
 import styled from 'styled-components';
-import { useState , useEffect } from 'react';
+import { useState  } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
@@ -23,11 +23,6 @@ function Login() {
     }
 
   };
-
-  // useEffect(() =>{
-  //   console.log('компонент был обновлен');
-
-  // });
 
 
   return (
@@ -75,6 +70,7 @@ const Registration = styled.div`
   max-width: 600px;
   width: calc(100% - 32px);
   padding: 15px 0;
+  
 `;
 
 const Title = styled.h1`
