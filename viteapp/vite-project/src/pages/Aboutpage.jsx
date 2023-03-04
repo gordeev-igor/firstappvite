@@ -21,6 +21,7 @@ const Aboutpage = () => {
       })
   }, [])
 
+ 
   return (
     <About>
       {
@@ -37,26 +38,47 @@ const Aboutpage = () => {
           :
           <AboutText>
             {articles.map(article => {
-            return (
-            <p><a href={article.webUrl}>{article.webTitle}</a></p>
-            )
-          })}
+              return (
+                <p><TextLink href={article.webUrl}>{article.webTitle}</TextLink></p>
+              )
+            })
+            }
           </AboutText>
       }
     </About>
   )
 }
 
+const TextLink = styled.a`
+  line-height: 10px;
+  color: #464655;
+
+  &:hover {
+  color: #68A691;
+  }
+`;
+
 const About = styled.div`
   max-width: 100%;
   width: calc(100% - 32px);
   font-size: 30px;
+  padding: 16px 0;
+  
+
 `;
 
 const AboutText = styled.div`
   font-family: "Hammersmith One";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400; 
+  line-height: 170%;
+
+  
+  
+  
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
   
 `;
 
