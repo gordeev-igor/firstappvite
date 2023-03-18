@@ -1,16 +1,22 @@
-
 import '../App.css'
 import styled from 'styled-components';
 import { useState  } from 'react';
 import { useNavigate } from "react-router-dom";
+import { observer } from 'mobx-react-lite';
+import {usePersistentStore} from '../store';
 
 
-function Login() {
+
+
+  const Login = observer(() => {
+    const RootStore = usePersistentStore()
+    console.log(RootStore.user.token.refresh);
+    console.log(RootStore.user.refresh());
+    console.log(RootStore.user.token.refresh);
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [incorrect, setIncorrect] = useState(false);
   const navigate = useNavigate();
-
   const inputInfo = (e) => {
     e.preventDefault()
     if (login == 'user' && password == 'pass') {
@@ -59,7 +65,7 @@ function Login() {
   )
 }
 
-
+)
 
 
 

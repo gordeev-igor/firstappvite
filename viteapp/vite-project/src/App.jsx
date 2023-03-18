@@ -8,10 +8,9 @@ import { Homepage } from './pages/Homepage';
 import { Aboutpage } from './pages/Aboutpage';
 
 
-function App() {
+function App () {
 
   return (
-
     <Wrapper>
       <Header />
       <Container>
@@ -23,9 +22,6 @@ function App() {
       </Container >
       <Footer />
     </Wrapper>
-
-
-
   )
 }
 
