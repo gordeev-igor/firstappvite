@@ -13,8 +13,12 @@ const UserStore = types.model('UserStore' , {
   role: types.optional(types.string, ''),
   token: types.optional(TokenStore , {}),
 }).actions((self) => ({
-  refresh() {
-    self.token.refresh = '221';
+  NewUser() {
+    self.role = 'igor';
+    self.token = {
+      refresh : 'gordeev',
+      access : 'alex'
+    }
   },
 }))
 

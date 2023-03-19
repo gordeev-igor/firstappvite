@@ -9,10 +9,7 @@ import {usePersistentStore} from '../store';
 
 
   const Login = observer(() => {
-    const RootStore = usePersistentStore()
-    console.log(RootStore.user.token.refresh);
-    console.log(RootStore.user.refresh());
-    console.log(RootStore.user.token.refresh);
+  const RootStore = usePersistentStore()
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [incorrect, setIncorrect] = useState(false);
@@ -20,7 +17,8 @@ import {usePersistentStore} from '../store';
   const inputInfo = (e) => {
     e.preventDefault()
     if (login == 'user' && password == 'pass') {
-      navigate('/about')
+      navigate('/about'),
+      RootStore.user.NewUser()
     }
     else {
       setIncorrect(true);
