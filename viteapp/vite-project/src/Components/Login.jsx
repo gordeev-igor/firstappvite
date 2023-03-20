@@ -1,24 +1,30 @@
 import '../App.css'
 import styled from 'styled-components';
 import { useState  } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation } from "react-router-dom";
 import { observer } from 'mobx-react-lite';
 import {usePersistentStore} from '../store';
+import { useAuth } from '../hook/useAuth';
 
 
-
-
+  
   const Login = observer(() => {
   const RootStore = usePersistentStore()
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [incorrect, setIncorrect] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const {signin} = useAuth()
+  const fromPage = location.state?.from?.pathname || '/';
+
+
   const inputInfo = (e) => {
     e.preventDefault()
     if (login == 'user' && password == 'pass') {
-      navigate('/about'),
-      RootStore.user.NewUser()
+      signin(login, () => navigate('/about' , {replace: true}))
+      // navigate('/about'),
+      RootStore.user.NewUser();
     }
     else {
       setIncorrect(true);
@@ -27,9 +33,6 @@ import {usePersistentStore} from '../store';
     }
 
   };
-
-  
-
 
   return (
     <Registration>
@@ -53,7 +56,7 @@ import {usePersistentStore} from '../store';
           <InputInfo type="password" value={password} onChange={e => setPassword(e.target.value)}></InputInfo>
         </UserInfo>
         <Button>
-          <ButtonLogin onClick={inputInfo} type="submit">LOGIN</ButtonLogin>
+          <ButtonLogin name = 'username' onClick={inputInfo} type="submit">LOGIN</ButtonLogin>
         </Button>
         {incorrect && <Incorrect >
           Invalid username or password

@@ -22,7 +22,7 @@ function Header() {
               </Link>
             </MenuLi>
             <MenuLi>
-            <Link className="link__page" to="/about">
+            <Link className="link__page" to="#">
                 About
               </Link>
             </MenuLi>

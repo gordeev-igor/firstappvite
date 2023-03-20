@@ -6,22 +6,30 @@ import styled from 'styled-components';
 import { Route, Routes, Link } from 'react-router-dom';
 import { Homepage } from './pages/Homepage';
 import { Aboutpage } from './pages/Aboutpage';
+import { RequireAuth } from './assets/hoc/RequireAuth';
+import { AuthProvider } from './assets/hoc/AuthProvider';
 
 
-function App () {
+function App() {
 
   return (
-    <Wrapper>
-      <Header />
-      <Container>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/home' element={<Homepage />} />
-          <Route path='/about' element={<Aboutpage />} />
-        </Routes>
-      </Container >
-      <Footer />
-    </Wrapper>
+    <AuthProvider>
+      <Wrapper>
+        <Header />
+        <Container>
+          <Routes>
+            <Route path='/' element={<Login />} />
+            <Route path='/home' element={<Homepage />} />
+            <Route path='/about' element={
+              <RequireAuth>
+                <Aboutpage />
+              </RequireAuth>
+            } />
+          </Routes>
+        </Container >
+        <Footer />
+      </Wrapper>
+    </AuthProvider>
   )
 }
 
