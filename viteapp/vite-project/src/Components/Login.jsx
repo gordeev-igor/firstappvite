@@ -25,6 +25,7 @@ import { useAuth } from '../hook/useAuth';
       signin(login, () => navigate('/about' , {replace: true}))
       // navigate('/about'),
       RootStore.user.NewUser();
+      console.log(RootStore.user.NewUser);
     }
     else {
       setIncorrect(true);
